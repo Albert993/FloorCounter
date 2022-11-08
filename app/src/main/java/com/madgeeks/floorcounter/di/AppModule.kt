@@ -2,7 +2,6 @@ package com.madgeeks.floorcounter.di
 
 import androidx.room.Room
 import com.google.android.gms.location.ActivityRecognition
-import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import com.madgeeks.floorcounter.Utils.Constants
 import com.madgeeks.floorcounter.data.db.FloorCounterDb
@@ -37,7 +36,7 @@ val appModule = module {
     }
     single {
         Retrofit.Builder()
-            .baseUrl(Constants.CURRENCY_BASE_URL)
+            .baseUrl(Constants.WEATHER_API_BASE_URL)
             .addConverterFactory(GsonConverterFactory.create()).build().create(WeatherAPI::class.java)
     }
     single<MainViewModelRepository> { MainViewModelRepositoryImpl(get()) }

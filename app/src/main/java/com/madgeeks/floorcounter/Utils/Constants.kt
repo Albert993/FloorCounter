@@ -4,7 +4,7 @@ class Constants {
     companion object {
         const val DATE_FORMAT = "yyyy-MM-dd"
         const val DATE_TIME_FORMAT_HOUR = "yyyy-MM-dd'T'HH':00'"
-        const val CURRENCY_BASE_URL = "https://api.open-meteo.com/v1/"
+        const val WEATHER_API_BASE_URL = "https://api.open-meteo.com/v1/"
         const val ROOM_DATABASE_NAME = "FloorCountingDb"
 
         // Intent Constants
